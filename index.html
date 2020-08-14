@@ -3,57 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1.0" />
-    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./styles/default.css" />
     <title>Portfolio</title>
   </head>
   <body>
     <section class="header">
-      <div id="nav-wrapper" class="nav-up">
-        <ul>
-          <li class="nav-item"><a href="#">home</a></li>
-          <li class="nav-item"><a href="#">projects</a></li>
-          <li class="nav-item"><a href="#">about</a></li>
-          <li class="nav-item"><a href="#">contact</a></li>
-        </ul>
+      <div class="container">
+        <div id="nav-wrapper" class="nav-up">
+          <ul>
+            <li class="nav-item box"><a href="#">home</a></li>
+            <li class="nav-item box"><a href="#">projects</a></li>
+            <li class="nav-item box"><a href="#">about</a></li>
+            <li class="nav-item box"><a href="#">contact</a></li>
+          </ul>
+          <div id="theme-btn" class="round-link box">
+            <i class="fas fa-moon"></i>
+          </div>
+        </div>
+        <div id="greeting-wrapper">
+          <h1>Hi, I'm Ravikanth</h1>
+        </div>
       </div>
-      <div id="greeting-wrapper">
-        <h1>Hi, I'm Ravikanth</h1>
-      </div>
-      <div
-        style="padding: 15px 15px 2500px; font-size: 30px; margin-top: 30px;"
-      >
-        <p>
-          <b
-            >This example demonstrates how to hide a navbar when the user starts
-            to scroll the page.</b
-          >
-        </p>
-        <p>Scroll down this frame to see the effect!</p>
-        <p>Scroll up to show the navbar.</p>
-        <p>
-          Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-          Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-
-      <script src="nav.js"></script>
     </section>
-    <section class="projects"></section>
+    <section id="projects">
+      <div class="container">
+        <h3>My projects</h3>
+        <div class="showcase">
+          <div class="grid">
+            <div class="grid-item box">
+              <img src="images/p1.png" />
+              <p>a react project</p>
+            </div>
+            <div class="grid-item box">
+              <img src="images/p1.png" />
+              <p>a react project</p>
+            </div>
+            <div class="grid-item box">
+              <img src="images/p1.png" />
+              <p>a react project</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section></section>
-    <section></section>
+    <section id="contact">
+      <div class="container">
+        <div id="links">
+          <ul id="button-links">
+            <li class="round-link box">
+              <a href="#"><i class="fab fa-github"></i></a>
+            </li>
+            <li class="round-link box">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li class="round-link box"><a href="#">a</a></li>
+          </ul>
+        </div>
+        <footer>
+          <p>Email: rdodda1@asu.edu</p>
+        </footer>
+      </div>
+    </section>
+    <script src="./scripts/nav.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8f19981eea.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
