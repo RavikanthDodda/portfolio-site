@@ -1,15 +1,15 @@
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight =
+let didScroll;
+let lastScrollTop = 0;
+let delta = 5;
+let navbarHeight =
   window.screen.width < 768
     ? document.getElementById("nav-btn").clientHeight
     : document.getElementById("nav-wrapper").clientHeight;
-var nav = window.screen.width >= 768 ? "nav-wrapper" : "nav-btn";
+let nav = window.screen.width >= 768 ? "nav-wrapper" : "nav-btn";
 window.addEventListener("scroll", function (event) {
   didScroll = true;
 });
-var isNavVis;
+let isNavVis;
 setInterval(function () {
   if (didScroll) {
     navbarHeight =
@@ -22,36 +22,45 @@ setInterval(function () {
   }
 }, 250);
 function hasScrolled() {
-  var st = window.scrollY;
-  if (nav !== "nav-btn")
+  let st = window.scrollY;
+  let navUp = "nav-down";
+  let navDown = "nav-up";
+  if (nav !== "nav-btn") {
+    navUp = "nav-up";
+    navDown = "nav-down";
     if (st > navbarHeight) {
-      document.getElementById(nav).style.backgroundColor = "black";
-    } else {
-      document.getElementById(nav).style.backgroundColor = "white";
+      //   document.getElementById(nav).style.backgroundColor = "black";
+      // } else {
+      //   document.getElementById(nav).style.backgroundColor = "white";
     }
+  }
   if (Math.abs(lastScrollTop - st) <= delta) return;
   if (st > lastScrollTop && st > navbarHeight) {
-    document.getElementById(nav).classList.remove("nav-up");
-    document.getElementById(nav).classList.add("nav-down");
+    document.getElementById(nav).classList.remove(navUp);
+    document.getElementById(nav).classList.add(navDown);
+    if (isNavVis) {
+      toggleNavBar();
+    }
   } else {
     // if (st + window.innerHeight < document.height) {
-    document.getElementById(nav).classList.remove("nav-down");
-    document.getElementById(nav).classList.add("nav-up");
+    document.getElementById(nav).classList.remove(navDown);
+    document.getElementById(nav).classList.add(navUp);
   }
   lastScrollTop = st;
 }
 
 function toggleNavBar() {
   if (isNavVis) {
-    document.getElementById("nav-wrapper").style.top =
-      -document.getElementById("nav-wrapper").clientHeight + "px";
-    document.getElementById(nav).children[0].classList.remove("fa-times");
-    document.getElementById(nav).children[0].classList.add("fa-bars");
+    document.getElementById("nav-wrapper").classList.remove("nav-down");
+    document.getElementById("nav-wrapper").classList.add("nav-up");
+    document.getElementById("nav-btn").children[0].classList.remove("fa-times");
+    document.getElementById("nav-btn").children[0].classList.add("fa-bars");
     isNavVis = false;
   } else {
-    document.getElementById("nav-wrapper").style.top = 0;
-    document.getElementById(nav).children[0].classList.add("fa-times");
-    document.getElementById(nav).children[0].classList.remove("fa-bars");
+    document.getElementById("nav-wrapper").classList.remove("nav-up");
+    document.getElementById("nav-wrapper").classList.add("nav-down");
+    document.getElementById("nav-btn").children[0].classList.add("fa-times");
+    document.getElementById("nav-btn").children[0].classList.remove("fa-bars");
     isNavVis = true;
   }
 }
