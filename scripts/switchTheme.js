@@ -17,6 +17,7 @@ function changeTheme(toggle) {
     root.style.setProperty("--secondary-bg", "#333333");
     root.style.setProperty("--accent-color", "white");
     root.style.setProperty("--text-primary", "white");
+    root.style.setProperty("--button-border", "#383838");
     localStorage.setItem("theme", "dark");
   } else {
     console.log("black2");
@@ -26,6 +27,7 @@ function changeTheme(toggle) {
     root.style.setProperty("--secondary-bg", "white");
     root.style.setProperty("--accent-color", "black");
     root.style.setProperty("--text-primary", "black");
+    root.style.setProperty("--button-border", "white");
     localStorage.setItem("theme", "light");
   }
 }

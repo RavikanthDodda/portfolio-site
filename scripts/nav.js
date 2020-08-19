@@ -28,10 +28,10 @@ function hasScrolled() {
   if (nav !== "nav-btn") {
     navUp = "nav-up";
     navDown = "nav-down";
-    if (st > navbarHeight) {
-      //   document.getElementById(nav).style.backgroundColor = "black";
-      // } else {
-      //   document.getElementById(nav).style.backgroundColor = "white";
+    if (st > navbarHeight && st < lastScrollTop) {
+      document.getElementById("nav-wrapper").classList.add("box");
+    } else {
+      document.getElementById("nav-wrapper").classList.remove("box");
     }
   }
   if (Math.abs(lastScrollTop - st) <= delta) return;
