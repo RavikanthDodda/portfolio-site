@@ -28,11 +28,11 @@ function hasScrolled() {
   if (nav !== "nav-btn") {
     navUp = "nav-up";
     navDown = "nav-down";
-    if (st > navbarHeight && st < lastScrollTop) {
-      document.getElementById("nav-wrapper").classList.add("box");
-    } else {
-      document.getElementById("nav-wrapper").classList.remove("box");
-    }
+  }
+  if (st > navbarHeight && st < lastScrollTop) {
+    document.getElementById("nav-wrapper").classList.add("box");
+  } else {
+    document.getElementById("nav-wrapper").classList.remove("box");
   }
   if (Math.abs(lastScrollTop - st) <= delta) return;
   if (st > lastScrollTop && st > navbarHeight) {
