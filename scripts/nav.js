@@ -29,7 +29,7 @@ function hasScrolled() {
     navUp = "nav-up";
     navDown = "nav-down";
   }
-  if (st > navbarHeight && st < lastScrollTop) {
+  if (st > 0 && st < lastScrollTop) {
     document.getElementById("nav-wrapper").classList.add("box");
   } else {
     document.getElementById("nav-wrapper").classList.remove("box");
