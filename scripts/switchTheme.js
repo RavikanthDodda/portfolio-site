@@ -17,7 +17,9 @@ function changeTheme(toggle) {
     root.style.setProperty("--secondary-bg", "#333333");
     root.style.setProperty("--accent-color", "white");
     root.style.setProperty("--text-primary", "white");
+    root.style.setProperty("--text-secondary", "rgb(182, 175, 163)");
     root.style.setProperty("--button-border", "#383838");
+    root.style.setProperty("--btn-color", " #66c2ff");
     localStorage.setItem("theme", "dark");
   } else {
     console.log("black2");
@@ -27,7 +29,9 @@ function changeTheme(toggle) {
     root.style.setProperty("--secondary-bg", "white");
     root.style.setProperty("--accent-color", "black");
     root.style.setProperty("--text-primary", "black");
+    root.style.setProperty("--text-secondary", "#333333");
     root.style.setProperty("--button-border", "white");
+    root.style.setProperty("--btn-color", " #006bb3");
     localStorage.setItem("theme", "light");
   }
 }

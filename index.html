@@ -6,6 +6,8 @@
       name="viewport"
       content="content=width=device-width, initial-scale=1.0"
     />
+
+    <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./styles/default.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Roboto+Mono:wght@400&display=swap"
@@ -40,56 +42,170 @@
       </div>
     </section>
 
-    <section id="#about">
+    <section id="about">
       <div class="container">
-        <h3>About me</h3>
+        <h2>About me</h2>
         <div id="info-wrapper">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
-            molestias similique! Aliquid odit, aut placeat laudantium eum
-            facilis nam ipsum?
-          </p>
+          <div id="text-info">
+            <p>
+              I'm a passionate coder with interests in software and web
+              development. Currently studying for a masters degree in software
+              engineering at Arizona State University.
+            </p>
+            <p><a id="resume-link" target="_blank" href="">Resume</a></p>
+            <div id="skills">
+              <h4>Techinal skills</h4>
+              <span class="line"
+                ><h5>Languages:</h5>
+                <p>Java, Python, JavaScript, HTML, CSS</p>
+              </span>
+              <span class="line"
+                ><h5>Libraries:</h5>
+                <p>React.js, Material-UI, Bootstrap.</p>
+              </span>
+              <span class="line">
+                <h5>Frameworks:</h5>
+                <p>Node.js, Express.js, Spring boot.</p>
+              </span>
+              <span class="line"
+                ><h5>Dev Tools:</h5>
+                <p>Git, Github, Docker, Dialogflow.</p>
+              </span>
+              <span class="line">
+                <h5>Other:</h5>
+                <p>MySQL, Heroku, AWS.</p>
+              </span>
+            </div>
+          </div>
+          <div id="pic-links">
+            <img id="profile-pic" src="images/portfolio_pic.jpg" />
+            <ul id="button-links">
+              <li class="round-link box">
+                <a
+                  href="https://github.com/RavikanthDodda"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li class="round-link box">
+                <a
+                  href="https://www.linkedin.com/in/ravikanth-dodda-a76682177/"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li class="round-link box">
+                <a href="mailto: rdodda1@asu.edu" targt="new" rel="noopener"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="projects">
       <div class="container">
-        <h3>My projects</h3>
+        <h2>My projects</h2>
         <div id="showcase">
           <div class="grid">
             <div class="grid-item box" id="item1">
+              <img src="images/dclassifieds.png" alt="dclassifieds" />
               <div class="card-content">
-                <img src="images/p1.png" />
-                <p>A todo webapp where you can create and manage todo lists.</p>
-                <p>(Developed with Reactjs & Material UI)</p>
+                <h5 class="card-title">Dclassifieds</h5>
+                <p>
+                  A full stack webapp for classified ads. Users can view
+                  existing ads, create an account and post and manage ads.
+                </p>
+                <p>Tech-stack: React.js, Spring boot, Docker, AWS.</p>
               </div>
-              <a
-                class="btn-link"
-                target="blank"
-                href="https://ravikanthdodda.github.io/todo-app/"
-                >VISIT</a
-              >
+              <div class="btn-link">
+                <a
+                  target="_blank"
+                  href="http://ec2-54-185-100-144.us-west-2.compute.amazonaws.com"
+                  >DEMO</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/RavikanthDodda/full-stack-webapp"
+                  >CODE</a
+                >
+              </div>
             </div>
             <div class="grid-item box" id="item2">
-              <img src="images/p1.png" />
-              <p>a react project</p>
-              <a class="btn-link" target="blank">VISIT</a>
+              <img src="images/pypro.png" alt="Pypro" />
+              <div class="card-content">
+                <h5 class="card-title">Pypro</h5>
+                <p>A programming language inspired from python.</p>
+                <p>Tech-stack: Python, SWI-Prolog</p>
+              </div>
+              <div class="btn-link">
+                <a
+                  target="_blank"
+                  href="https://github.com/RavikanthDodda/SER502-Spring2020-Team15"
+                  >CODE</a
+                >
+              </div>
             </div>
             <div class="grid-item box" id="item3">
-              <img src="images/p1.png" />
-              <p>a react project</p>
-              <a class="btn-link" href="" target="blank">VISIT</a>
+              <img src="images/warframe bot.png" alt="Warframe bot" />
+              <div class="card-content">
+                <h5 class="card-title">Warframe chatbot</h5>
+                <p>
+                  A google assistant chatbot to get information and in-game
+                  status for warframe game.
+                </p>
+                <p>Tech-stack: Node.js, Express.js, Dialogflow</p>
+                <div class="btn-link">
+                  <a
+                    target="_blank"
+                    href="https://github.com/RavikanthDodda/Warframe-bot"
+                    >CODE</a
+                  >
+                </div>
+              </div>
             </div>
             <div class="grid-item box" id="item4">
-              <img src="images/p1.png" />
-              <p>a react project</p>
-              <a class="btn-link" href="" target="blank">VISIT</a>
+              <img src="images/todo1.png" alt="To-do app" />
+              <div class="card-content">
+                <h5 class="card-title">To-do app</h5>
+                <p>A single page webapp to create and manage todo lists.</p>
+                <p>Tech-stack: React.js, Material-UI</p>
+                <div class="btn-link">
+                  <a
+                    target="_blank"
+                    href="https://ravikanthdodda.github.io/todo-app/"
+                    >DEMO</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://github.com/RavikanthDodda/todo-app"
+                    >CODE</a
+                  >
+                </div>
+              </div>
             </div>
             <div class="grid-item box" id="item5">
               <img src="images/p1.png" />
-              <p>a react project</p>
-              <a class="btn-link" href="" target="blank">VISIT</a>
+              <div class="card-content">
+                <h5 class="card-title">Pypro</h5>
+                <p>a react project</p>
+                <div class="btn-link">
+                  <a
+                    target="_blank"
+                    href="https://ravikanthdodda.github.io/todo-app/"
+                    >CODE</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://ravikanthdodda.github.io/todo-app/"
+                    >DEMO</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -98,6 +214,7 @@
 
     <section id="contact">
       <div class="container">
+        <h4>Contact me</h4>
         <div id="links">
           <ul id="button-links">
             <li class="round-link box">
@@ -116,17 +233,21 @@
                 ><i class="fab fa-linkedin-in"></i
               ></a>
             </li>
-            <li class="round-link box"><a href="#">a</a></li>
+            <li class="round-link box">
+              <a href="mailto: rdodda1@asu.edu" targt="new" rel="noopener"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </li>
           </ul>
         </div>
         <footer>
+          <p>Phone: 480-955-9625</p>
           <p>Email: rdodda1@asu.edu</p>
         </footer>
       </div>
     </section>
     <script src="./scripts/nav.js"></script>
     <script src="./scripts/switchTheme.js"></script>
-    <script src="./scripts/showcase.js"></script>
     <script
       src="https://kit.fontawesome.com/8f19981eea.js"
       crossorigin="anonymous"
