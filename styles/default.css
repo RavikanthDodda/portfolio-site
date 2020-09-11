@@ -107,6 +107,9 @@ section {
   transition: all 1s ease-in;
   margin-top: 3rem;
 }
+.header {
+  margin: 0;
+}
 /* navigation bar */
 #theme-btn {
   position: fixed;
@@ -114,12 +117,12 @@ section {
   top: 0;
   margin: 1rem 1rem;
   z-index: 3;
+  transition: top 0.3s ease-in-out;
 }
 #nav-btn {
   position: fixed;
   margin: 1rem 1rem;
   left: 0;
-  top: 0;
   transition: top 0.3s ease-in-out;
   z-index: 2;
 }
