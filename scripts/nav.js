@@ -2,10 +2,10 @@ let didScroll;
 let lastScrollTop = 0;
 let delta = 5;
 let navbarHeight =
-  window.screen.width < 768
+  window.screen.width < 868
     ? document.getElementById("nav-btn").clientHeight
     : document.getElementById("nav-wrapper").clientHeight;
-let nav = document.body.offsetWidth >= 768 ? "nav-wrapper" : "nav-btn";
+let nav = document.body.offsetWidth >= 868 ? "nav-wrapper" : "nav-btn";
 window.addEventListener("scroll", function (event) {
   didScroll = true;
 });
@@ -13,10 +13,10 @@ let isNavVis;
 
 // Called every 250 ms
 setInterval(function () {
-  nav = document.body.offsetWidth >= 768 ? "nav-wrapper" : "nav-btn";
+  nav = document.body.offsetWidth >= 868 ? "nav-wrapper" : "nav-btn";
   if (didScroll) {
     navbarHeight =
-      document.body.offsetWidth < 768
+      document.body.offsetWidth < 868
         ? document.getElementById("nav-btn").clientHeight
         : document.getElementById("nav-wrapper").clientHeight;
     isNavVis = document.body.offsetWidth > 768 ? undefined : isNavVis;
@@ -43,10 +43,17 @@ function hasScrolled() {
   if (st > lastScrollTop && st > navbarHeight) {
     document.getElementById(nav).classList.remove(navUp);
     document.getElementById(nav).classList.add(navDown);
+    document.getElementById("theme-btn").classList.remove(navUp);
+    document.getElementById("theme-btn").classList.add(navDown);
+    if (isNavVis) {
+      toggleNavBar();
+    }
   } else {
     // if (st + window.innerHeight < document.height) {
     document.getElementById(nav).classList.remove(navDown);
     document.getElementById(nav).classList.add(navUp);
+    document.getElementById("theme-btn").classList.remove(navDown);
+    document.getElementById("theme-btn").classList.add(navUp);
   }
 
   if (nav === "nav-btn" && isNavVis === undefined) {
