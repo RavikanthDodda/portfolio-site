@@ -19,7 +19,7 @@ setInterval(function () {
       document.body.offsetWidth < 868
         ? document.getElementById("nav-btn").clientHeight
         : document.getElementById("nav-wrapper").clientHeight;
-    isNavVis = document.body.offsetWidth > 768 ? undefined : isNavVis;
+    isNavVis = document.body.offsetWidth > 768 ? null : isNavVis;
     hasScrolled();
     didScroll = false;
   }
@@ -56,7 +56,7 @@ function hasScrolled() {
     document.getElementById("theme-btn").classList.add(navUp);
   }
 
-  if (nav === "nav-btn" && isNavVis === undefined) {
+  if (nav === "nav-btn" && isNavVis === null) {
     document.getElementById("nav-wrapper").classList.remove("nav-down");
     document.getElementById("nav-wrapper").classList.add("nav-up");
     isNavVis = true;
